@@ -1,20 +1,23 @@
 #include <stdio.h>
 /**
- * main - entry block
- * hexadecimal
- * Return: 0 
-**/
+ * main - main block
+ * Description: Print all numbers of base64 .
+ * You can only use `putchar`, and only 3 times.
+ * Return: 0
+ */
 int main(void)
 {
-int x = 0;
-for (x = 0; x < 10; x++)
-{
-putchar(x % 10 + '0');
-}
-for (x = 'a'; x <= 'f'; x++)
-{
-putchar(x);
-}
-putchar('\n');
-return (0);
+	int a;
+
+	for (a = 0; a < 10; a++)
+	{
+		putchar(a + '0');
+	}
+	for (a = 'a'; a <= 'f'; a++)
+	{
+		putchar(a);
+	}
+	putchar('\n');
+
+	return (0);
 }
