@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * main - 
- * comb3
+ * main - main block
+ * Description:  .
+ * You can only uses.
  * Return: 0
  */
 int main(void)
