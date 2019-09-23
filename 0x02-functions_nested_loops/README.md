@@ -1,0 +1,1 @@
+putchar in functions nested loops
