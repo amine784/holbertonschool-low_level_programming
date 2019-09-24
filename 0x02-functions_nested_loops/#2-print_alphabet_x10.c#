@@ -1,0 +1,31 @@
+#include "holberton.h"
+/**
+*print alphabet x10 function.
+*Return: Always 0 (Success).
+*#include "holberton.h"
+
+/**
+ * _abs - compute the absolute value of an integer
+ *
+ * @a: int type
+ *
+ * Return: return absolute value of integer
+ */
+
+int _abs(int a)
+{
+	if (a < 0)
+		return (a * -1);
+	else
+		return (a);
+}/
+void print_alphabet_x10(void)
+{
+int i, j;
+for (i = 0; i < 10; i++)
+{
+for (j = 'a'; j <= 'z'; j++)
+_putchar(j);
+_putchar('\n');
+}
+}

@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - entry point
+ * printf alphabet function
  * alternative way for dsiplaying
  * Return: Always 0 (Success)
  */
