@@ -7,9 +7,9 @@
 int main(void)
 {
 long int u0 = 1, u1 = 2, sum = 2;
-int ip;
+int i;
 
-for (ip = 1; ip < 31; ip++)
+for (i = 1; i < 31; i++)
 {
 if ((u0 + u1) % 2 == 0)
 sum += u0 + u1;
