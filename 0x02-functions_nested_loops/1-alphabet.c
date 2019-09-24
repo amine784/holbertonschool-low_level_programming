@@ -1,16 +1,13 @@
 #include "holberton.h"
 /**
-* main - main block
-* Print functions a.
-* Return: 0
-*/
+ * main - entry point
+ * alternative way for dsiplaying
+ * Return: Always 0 (Success)
+ */
 void print_alphabet(void)
 {
-char c = 'a';
-while (c <= 'z')
-{
-_putchar(c);
-c++;
-}
+int i;
+for (i = 'a'; i <= 'z'; i++)
+_putchar(i);
 _putchar('\n');
 }
