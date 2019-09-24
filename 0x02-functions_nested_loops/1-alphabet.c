@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * main - main block
- * Print all numbers 0..10.
+ * Print functions a.
  * Return: 0
  */
 void print_alphabet(void)
