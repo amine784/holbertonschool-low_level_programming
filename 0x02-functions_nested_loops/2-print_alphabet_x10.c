@@ -1,24 +1,23 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * main - main block
- * Print all numbers 0..10.
- * Return: 0
- */
+* main - main block
+* Print all numbers 0..10.
+* Return: 0
+*/
 void print_alphabet_x10(void)
 {
-	char c;
-	int d = 0;
-
-	while (d < 10)
-	{
-		c = 'a';
-		while (c <= 'z')
-		{
-			_putchar(c);
-			c++;
-		}
-		_putchar('\n');
-		d++;
-	}
+char c;
+int d = 0;
+while (d < 10)
+{
+c= 'a';
+while (c <= 'z')
+{
+_putchar(c);
+c++;
+}
+_putchar('\n');
+d++;
+}
 }

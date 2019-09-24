@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * main - main block
- * Print functions a.
- * Return: 0
- */
+* main - main block
+* Print functions a.
+* Return: 0
+*/
 void print_alphabet(void)
 {
 char c = 'a';
