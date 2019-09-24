@@ -1,9 +1,8 @@
 #include "holberton.h"
 /**
- * printf alphabet function
- * alternative way for dsiplaying
- * Return: Always 0 (Success)
- */
+  * print_alphabet - prints the alphabet, in lowercase, followed by a new line.
+  * Return: 0(success).
+**/
 void print_alphabet(void)
 {
 int i;
