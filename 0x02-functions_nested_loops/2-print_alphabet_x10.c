@@ -19,4 +19,5 @@ c++;
 _putchar('\n');
 d++;
 }
+ _putchar('\n');
 }
