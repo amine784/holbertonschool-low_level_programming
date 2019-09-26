@@ -1,12 +1,19 @@
 #include "holberton.h"
 /**
-*print_line - prints line n .
-*
-*
-*Return: 0(success).
-*/
-void print_more_line(void)
+ * print_line -n is the number of char.
+ *
+ * Return 0.
+ */
+void print_line(void)
 {
-
+int i;
+if (n >= 0)
+{
+for (i = 0; i <= n; i++)
+{
+_putchar('_');
+}
+}
+_putchar('\n');
 return (0);
 }
