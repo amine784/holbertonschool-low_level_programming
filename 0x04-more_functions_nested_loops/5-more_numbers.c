@@ -4,13 +4,13 @@
  */
 void more_numbers(void)
 {
-int i,j,k;
+int i, j, k;
 for (i = 0; i < 10; i++)
 {
 for (j = 0; j < 14; j++)
 {
 if (j < 10)
-k= j;
+k = j;
 else
 k = j / 10;
 _putchar(k + '0');
