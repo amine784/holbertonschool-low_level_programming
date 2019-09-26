@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - fizzbuz.
+ * main - check the code for Holberton School student
  *
- * Return 
+ * Return: Always 0.
  */
 int main(void)
 {
