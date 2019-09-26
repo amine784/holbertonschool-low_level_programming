@@ -36,7 +36,7 @@ void print_number(int n)
 			_putchar(((m / pr) * -1) + '0');
 		else
 			_putchar((m / pr) + '0');
-		rm = a % power;
+		rm = a % pr;
 		pr /= 10;
 		m = rm;
 	}
