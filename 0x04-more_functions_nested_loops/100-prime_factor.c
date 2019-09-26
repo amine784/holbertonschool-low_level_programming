@@ -7,8 +7,7 @@
 */
 int main(void)
 {
-long int num = 612852475143,
-div = 2;
+long int num = 612852475143,div = 2;
 while (div < num)
 {
 if (num % div != 0)
