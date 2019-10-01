@@ -11,17 +11,16 @@ i = 0;
 int k;
 int l;
 int j;
-l = 0;
 while (s[i] != 0)
 {
 i++;
 }
-j = i--;
-for (j = 0; j < i / 2 ; j++)
+j = i - 1;
+for (l = 0; l < i / 2 ; l++)
 {
-k = s[l];
-s[l] = s[j];
-s[i] = k;
-l--;
+k = s[j];
+s[j] = s[l];
+s[l] = k;
+j--;
 }
 }
