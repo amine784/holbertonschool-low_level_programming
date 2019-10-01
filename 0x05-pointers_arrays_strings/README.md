@@ -1,0 +1,1 @@
+learn how to use a pointer in strings and arrays 
