@@ -1,11 +1,14 @@
 #include "holberton.h"
 /**
-*strlen -return length of string.
-*@s:char type.
-*return always 0.
-*check the code for holberton school student
+ * _strlen - return the length of a string.
+ * @s:char type.
+ * Return: Always 0.
+ */
 int _strlen(char *s)
 {
 int i;
-for(i=0,s[i] != 0;i++;)
+for (i = 0 ; s[i] != 0 ; i++;)
+{
+}
 return (i);
+}
