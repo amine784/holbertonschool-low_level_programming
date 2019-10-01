@@ -11,7 +11,7 @@ int j;
 char a;
 int b;
 int len;
-while ((*(s + i) != '\0'))
+while (*(s + i) != '\0')
 {
 i++;
 }
@@ -21,5 +21,6 @@ for (j = 0; j < b ; j++)
 {
 a = s[j];
 s[j] = s[len - 1 - j];
-s[len - 1 - j] = a;	}
+s[len - 1 - j] = a;
+}
 }
