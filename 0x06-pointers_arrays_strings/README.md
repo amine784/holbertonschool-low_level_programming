@@ -1,0 +1,1 @@
+more exercice to improve yr knowledge in programming c(pointer,arrays,strings)
