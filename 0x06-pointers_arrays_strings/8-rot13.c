@@ -14,11 +14,11 @@ char c2[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
 
 for (i = 0; s[i] != '\0'; i++)
 {
-for (j = 0; s1[j] != '\0' && a  == 0; j++)
+for (j = 0; c1[j] != '\0' && a  == 0; j++)
 {
-if (s[i] == s1[j])
+if (s[i] == c1[j])
 {
-s[i] = s2[j];
+s[i] = c2[j];
 a = 1;
 }
 }
