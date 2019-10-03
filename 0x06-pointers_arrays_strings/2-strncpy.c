@@ -7,19 +7,14 @@
 * Return: Always 0
 */
 char *_strncpy(char *dest, char *src, int n)
+
 {
-int i;
-int j = 0;
-for (i = 0 ; dest[i] != '\0' ; i++)
-;
-while (j < n && src[j] != '\0')
+int a;
+for (a = 0; a < n && src[a] != '\0'; a++)
+dest[a] = src[a];
+for ( ; a < n; a++)
 {
-dest[j] = src[j];
-j++;
-}
-for ( ; j < n ; j++)
-{
-dest[j] = '\0';
+dest[a] = '\0';
 }
 return (dest);
 }
