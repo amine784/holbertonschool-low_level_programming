@@ -12,7 +12,7 @@ while (s[l] != '\0')
 {
 l++;
 }
-for (i = 0; i < l ; i++)
+for (i = 0; i < l; i++)
 {
 if (s[i] == '\n'
 || s[i] == '\t'
