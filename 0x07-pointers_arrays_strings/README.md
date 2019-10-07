@@ -1,0 +1,1 @@
+learn pointer to pointer and multi-dimonsional Arrays in c and also pointers and arrays
