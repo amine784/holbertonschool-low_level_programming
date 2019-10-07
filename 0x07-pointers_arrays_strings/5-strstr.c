@@ -14,7 +14,7 @@ for (i = 0 ; haystack[i] ; i++)
 if (needle[0] == haystack[i])
 {
 j = i;
-for (k = 0; needle[k] ; k++)
+for (k = 0; needle[k] && haystack[i] ; k++)
 {
 if (needle[k] != haystack[j])
 {
