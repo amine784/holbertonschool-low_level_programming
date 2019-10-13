@@ -7,23 +7,21 @@
 *@argv:char pointer that contain the name of argument
 *Return: always 1.
 **/
-int main(int argc, char *argv[])
+int main(int argc, char  *argv[])
 {
-int c1, c2;
-int s = 0;
-if (argc < 1)
-printf("0");
-for (c1 = 1; c1 < argc; c1++)
+int i, j, s = 0;
+
+for (i = 1; i < argc; i++)
 {
-s += atoi(argv[c1]);
-for (c1 = 0; argv[c1][c2] != '\0'; c2++)
+for (j = 0; argv[i][j]; j++)
 {
-if (!(isdigit(argv[c1][c2])))
+if (!isdigit(argv[i][j]))
 {
 printf("Error\n");
-return (0);
+return (1);
 }
 }
+s += atoi(argv[i]);
 }
 printf("%d\n", s);
 return (0);
