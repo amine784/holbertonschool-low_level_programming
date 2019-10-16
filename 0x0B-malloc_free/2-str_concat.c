@@ -12,11 +12,15 @@ int i, j, k, m;
 int l = 0;
 char *p;
 if (s1 != NULL)
+{
 for (i = 0; s1[i] != '\0'; i++)
 ;
+}
 if (s2 != NULL)
+{
 for (j = 0; s2[j] != '\0'; j++)
 ;
+}
 l = i + j;
 p = malloc(sizeof(char) * (l + 1));
 if (p == NULL)
