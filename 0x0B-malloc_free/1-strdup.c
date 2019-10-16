@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
-* *_strdu-function returns a pointer to a newly allocated
+*_strdup- function returns a pointer to a newly allocated
 * space in memory, which contains a copy of the
 * string given as a parameter.
 *@str: pointer with char type
