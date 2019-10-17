@@ -1,6 +1,18 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
+ * _len - length ofstring
+ * @s: string 
+ * Return: The length of s
+ */
+int _len(char *s)
+{
+int a;
+for (a = 0; s[a] != '\0'; a++)
+;
+return (a);
+}
+/**
 * *string_nconcat-function that concatenates two strings.
 *@s1: pointer to string s1
 *@s2: pointer to string s2
@@ -9,35 +21,24 @@
 **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int i, j, k, l;
+  unsigned int i, j, k;
 char *p;
-if (s1 != NULL)
-for (i = 0; s1[i] != '\0'; i++)
-;
-if (s2 != NULL)
-for (j = 0; s2[j] != '\0'; j++)
-;
-if (n < j)
-{
-j = n;
-k = i + j;
-k++;
-p = malloc(sizeof(char) * k);
-}
-else
-p = malloc(sizeof(char) *(i + n + 1));
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
+i = _len(s1);
+j = _len(s2);
+if (n > j)
+n = j;
+p = malloc(sizeof(char) * (i + n + 1));
 if (p == NULL)
-{
 return (NULL);
-}
-for (l = 0; l < i; l++)
-{
-p[l] = s1[l];
-}
-for (l = 0; l < j; l++)
-{
-p[l + i] = s2[l];
-}
-p[k - 1] = '\0';
+for (k = 0; k < i; k++)
+p[k] = s1[k];
+for (; k < i + n; k++)
+p[k] = s2[k - i];
+p[i + n] = '\0';
 return (p);
 }
+
