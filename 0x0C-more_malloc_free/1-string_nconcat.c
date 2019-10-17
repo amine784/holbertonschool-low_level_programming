@@ -21,7 +21,7 @@ if (s2 != NULL)
 for (j = 0; s2[j] != '\0'; j++)
 ;
 }
-if (n <= j)
+if (n >= j)
 j = n;
 k = i + j;
 k++;
