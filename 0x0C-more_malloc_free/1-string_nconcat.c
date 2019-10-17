@@ -22,15 +22,12 @@ for (j = 0; s2[j] != '\0'; j++)
 ;
 }
 if (n < j)
-{
 j = n;
-}
-k = i + j + 1;
+k = i + j;
+k++;
 p = malloc(k *sizeof(char));
 if (p == NULL)
-{
 return (NULL);
-}
 for (l = 0; l < i; l++)
 {
 p[l] = s1[l];
