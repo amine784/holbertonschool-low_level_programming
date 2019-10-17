@@ -1,10 +1,10 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * _len - length ofstring
- * @s: string 
- * Return: The length of s
- */
+* _len - length ofstring
+* @s: string
+* Return: The length of s
+*/
 int _len(char *s)
 {
 int a;
@@ -21,7 +21,7 @@ return (a);
 **/
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-  unsigned int i, j, k;
+unsigned int i, j, k;
 char *p;
 if (s1 == NULL)
 s1 = "";
