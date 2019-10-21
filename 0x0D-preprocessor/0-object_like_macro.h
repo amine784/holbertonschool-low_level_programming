@@ -1,0 +1,4 @@
+#ifndef HOLBERTON_FILE
+#definie HOLBERTON_FILE
+#DEFINIE SIZE 1024
+#endif
