@@ -1,4 +1,6 @@
-#ifndef HOLBERTON_FILE
-#definie HOLBERTON_FILE
-#DEFINIE SIZE 1024
+#ifndef HEADER_FILE
+#define HEADER_FILE
+
+#define SIZE 1024
+
 #endif
