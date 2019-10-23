@@ -1,5 +1,6 @@
-#ifndef FUNCTIONPOINTER_H
-#define FUNCTIONPOINTER_H
+#ifndef POINTERFUNCTION_
+#define POINTERFUNCTION
+#include <stddef.h>
 int _putchar(char c);
 void print_name(char *name, void (*f)(char *));
 void array_iterator(int *array, size_t  size, void (*action)(int));
