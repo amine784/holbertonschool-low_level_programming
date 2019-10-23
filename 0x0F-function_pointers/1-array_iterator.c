@@ -7,9 +7,9 @@
 *@action:is a pointer to the function you need to use.
 *@array: array to iterate.
 **/
-void array_iterator(int *array, size_t size, void (*action)(int))
+void array_iterator(int *array, int size, void (*action)(int))
 {
-unsigned int i;
+int i;
  if ((action == NULL) || (size == 0) || (array == NULL))
 return;
 for (i = 0; i < size; i++)
