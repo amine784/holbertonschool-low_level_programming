@@ -4,46 +4,46 @@
 #include <stdarg.h>
 /**
 *print_char-function that print char.
-*@arg:va_list type
+*@c:va_list type
 *Return :nothing.
 **/
-void print_char(va_list arg)
+void print_char(va_list c)
 {
-printf("%c", va_arg(arg, int));
+printf("%c", va_arg(c, int));
 }
 /**
 * print_int-function that print integer.
-*@arg:va_list type
+*@i:va_list type
 *Return :nothing.
 **/
-void print_int(va_list arg)
+void print_int(va_list i)
 {
-printf("%d", va_arg(arg, int));
+printf("%d", va_arg(i, int));
 }
 /**
 *print_float-function that print float .
-*@arg:va_list type
+*@f:va_list type
 *Return :nothing.
 **/
-void print_float(va_list arg)
+void print_float(va_list f)
 {
-printf("%f", va_arg(arg, double));
+printf("%f", va_arg(f, double));
 }
 /**
 *print_string-function that print strings  .
-*@arg:va_list type
+*@s:va_list type
 *Return :nothing.
 **/
-void print_string(va_list arg)
+void print_string(va_list s)
 {
 char *c;
-c = va_arg(arg, char*);
-if (c == NULL)
+c = va_arg(s, char*);
+if (c != NULL)
 {
-c = "(nill)";
+printf("%s", c);
 }
 else
-printf("%s", c);
+printf("(nil)");
 }
 /**
 * print_all-function that print anything.
@@ -70,7 +70,7 @@ while (format && format[i])
 j = 0;
 while (op[j].operator != NULL)
 {
-if (format[i] == op[j].operator[0])
+if (op[j].operator[0] == format[i])
 {
 printf("%s", separator);
 f = op[j].adressFunc;
