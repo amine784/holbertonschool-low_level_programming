@@ -68,16 +68,17 @@ while (format && format[i])
 j = 0;
 while (op[j].operator != NULL)
 {
-if (format[i] == op[j].operator[0])
+  if (format[i] == op[j].operator[0])
 {
 printf("%s", separator);
 op[j].adressFunc (arg);
 separator = ", ";
+break;
 }
 j++;
 }
 i++;
 }
-printf("\n");
 va_end(arg);
+printf("\n");
 }
