@@ -1,5 +1,5 @@
-#include<stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include "variadic_functions.h"
 /**
 *print_char-function that print char.
@@ -50,11 +50,6 @@ printf("(nil)");
 **/
 void print_all(const char * const format, ...)
 {
-unsigned int i = 0, j;
-void (*f)(va_list);
-va_list arg;
-va_start(arg, format);
-char *separator = "";
 type op[] = {
 {"c", print_char},
 {"i", print_int},
@@ -62,6 +57,11 @@ type op[] = {
 {"s", print_string},
 {NULL, NULL}
 };
+int i = 0, j;
+va_list arg;
+void (*f)(va_list);
+va_start(arg, format);
+char *separator = "";
 while (format && format[i])
 {
 j = 0;
