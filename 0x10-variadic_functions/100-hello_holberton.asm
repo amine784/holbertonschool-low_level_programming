@@ -10,4 +10,4 @@ main:	mov rax, 1
 	int 0x80
 
 section .data
-        string:	db "hello, Holberton",10
+        string:	db "Hello, Holberton",10
