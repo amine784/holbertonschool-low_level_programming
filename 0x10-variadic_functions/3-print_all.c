@@ -1,6 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 /**
 *print_char-function that print char.
 *@arg:va_list type
@@ -68,7 +69,7 @@ while (format && format[i])
 j = 0;
 while (op[j].operator != NULL)
 {
-  if (format[i] == op[j].operator[0])
+  if (format[i] == *(op[j].operator))
 {
 printf("%s", separator);
 op[j].adressFunc (arg);
