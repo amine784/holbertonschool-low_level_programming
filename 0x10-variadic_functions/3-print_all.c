@@ -35,13 +35,12 @@ printf("%f", va_arg(f, double));
 **/
 void print_string(va_list s)
 {
-char *c;
-c = va_arg(s, char*);
+char *c = va_arg(s, char*);
 if (c != NULL)
 {
 printf("%s", c);
+return;
 }
-else
 printf("(nil)");
 }
 /**
@@ -51,19 +50,18 @@ printf("(nil)");
 **/
 void print_all(const char * const format, ...)
 {
-int i, j;
+unsigned int i = 0, j;
 void (*f)(va_list);
 va_list arg;
+va_start(arg, format);
 char *separator = "";
 type op[] = {
 {"c", print_char},
 {"i", print_int},
 {"f", print_float},
 {"s", print_string},
-{NULL, NULL},
+{NULL, NULL}
 };
-va_start(arg, format);
-i = 0;
 while (format && format[i])
 {
 j = 0;
