@@ -53,6 +53,7 @@ printf("%s", c);
 void print_all(const char * const format, ...)
 {
 int i, j;
+void (*f)(va_list);
 va_list arg;
 char *separator = "";
 type op[] = {
@@ -69,12 +70,12 @@ while (format && format[i])
 j = 0;
 while (op[j].operator != NULL)
 {
-  if (format[i] == *(op[j].operator))
+if (format[i] == op[j].operator[0])
 {
 printf("%s", separator);
-op[j].adressFunc (arg);
+f = op[j].adressFunc;
+f(arg);
 separator = ", ";
-break;
 }
 j++;
 }

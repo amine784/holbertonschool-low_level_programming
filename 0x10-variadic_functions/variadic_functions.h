@@ -14,6 +14,6 @@ void print_all(const char * const format, ...);
 typedef struct tab_data
 {
 char *operator;
-void (*adressFunc)();
+void (*adressFunc)(va_list);
 } type;
 #endif
