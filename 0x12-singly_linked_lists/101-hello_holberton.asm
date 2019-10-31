@@ -1,4 +1,5 @@
 	global main
+	extern printf
 	section .text
 main:	mov rax, 1
 	mov rdi, 1
