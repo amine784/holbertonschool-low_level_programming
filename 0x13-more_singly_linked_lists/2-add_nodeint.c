@@ -6,7 +6,7 @@
 * *add_nodeint-function that add a new node at the beginning of a
 *@head:pointer to the first.
 *@n:value.
-*Return: NULL if ik failed.
+*Return: NULL if failed.
 **/
 listint_t *add_nodeint(listint_t **head, const int n)
 {
