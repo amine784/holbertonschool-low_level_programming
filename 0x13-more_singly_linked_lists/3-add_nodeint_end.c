@@ -31,5 +31,5 @@ else
 {
 *head = elmt;
 }
-return (elmt);
+return (*head);
 }
