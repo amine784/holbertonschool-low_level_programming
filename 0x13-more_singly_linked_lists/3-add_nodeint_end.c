@@ -21,15 +21,13 @@ return (NULL);
 (*elmt).next = NULL;
 listint_t *tempo;
 tempo = *head;
- while ((tempo != NULL) && (*tempo).next != NULL)
-tempo = (*tempo).next;
 if (tempo != NULL)
 {
+while ((*tempo).next != NULL)
+tempo = (*tempo).next;
 (*tempo).next = elmt;
+return (elmt);
 }
-else
-{
 *head = elmt;
-}
 return (*head);
 }
