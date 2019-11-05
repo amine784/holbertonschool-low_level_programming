@@ -10,10 +10,12 @@
 void free_listint2(listint_t **head)
 {
 listint_t *a = NULL;
+listint_t *b = NULL;
 int i;
 for (i = 0; *head != NULL; i++)
 {
-a = (*(*head)).next;
+b=*head;
+a = (*b).next;
 free(*head);
 *head = a;
 }
