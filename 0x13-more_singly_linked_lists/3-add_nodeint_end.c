@@ -22,7 +22,7 @@ return (NULL);
 tempo = *head;
 if (tempo != NULL)
 {
-for (i = 0;(*tempo).next != NULL; i++)
+for (i = 0; (*tempo).next != NULL; i++)
 tempo = (*tempo).next;
 (*tempo).next = elmt;
 return (elmt);
