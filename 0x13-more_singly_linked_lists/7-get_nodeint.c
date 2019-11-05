@@ -19,7 +19,7 @@ if (c == NULL)
 {
 return (NULL);
 }
-for (i = 0; i < index; i++)
+for (i = 0; i != index; i++)
 c = (*c).next;
 if (c == NULL)
 {
