@@ -16,16 +16,12 @@ listint_t *c = NULL;
 unsigned int i = 0;
 
 c = head;
-if (c == NULL)
+if (head == NULL)
 {
 return (NULL);
 }
-for (i = 0; i <= index; i++)
+for (i = 0; i != index; i++)
 c = (*c).next;
-if (c == NULL)
-{
-return (NULL);
-}
 head = c;
 return (head);
 }
