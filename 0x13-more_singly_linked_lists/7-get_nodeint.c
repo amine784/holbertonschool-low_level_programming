@@ -20,7 +20,7 @@ if (head == NULL)
 {
 return (NULL);
 }
-for (i = 0; i != index; i++)
+for (i = 0; c && i < index; i++)
 c = (*c).next;
 head = c;
 return (head);
