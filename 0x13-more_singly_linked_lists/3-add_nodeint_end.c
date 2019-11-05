@@ -29,5 +29,5 @@ tempo = (*tempo).next;
 return (elmt);
 }
 *head = elmt;
-return (*head);
+return (elmt);
 }
