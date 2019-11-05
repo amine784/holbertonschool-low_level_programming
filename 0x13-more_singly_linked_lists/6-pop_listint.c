@@ -4,7 +4,7 @@
 #include "lists.h"
 #include <stddef.h>
 /**
-* pop_listint-function that delete the head node of a list.
+* pop_listint-function that delete ther first in the list
 *@head:first node.
 *Return: always success.
 **/
@@ -20,6 +20,7 @@ return (0);
 a = (*head)->next;
 i = (*head)->n;
 free(*head);
+*head = NULL;
 *head = a;
 return (i);
 }
