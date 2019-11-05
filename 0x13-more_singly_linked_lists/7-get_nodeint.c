@@ -1,4 +1,4 @@
-#include <stdio.h>
+include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
@@ -19,12 +19,13 @@ if (c == NULL)
 {
 return (NULL);
 }
-for (i = 0; i != index; i++)
+for (i = 0; i <  index; i++)
+{
 c = (*c).next;
 if (c == NULL)
 {
 return (NULL);
 }
-head = c;
-return (head);
+}
+return (c);
 }
