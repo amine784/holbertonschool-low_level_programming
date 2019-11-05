@@ -1,5 +1,4 @@
-
- #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
@@ -16,6 +15,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 listint_t *c = NULL;
 unsigned int i = 0;
 c = head;
+if (c == NULL)
+{
+return (NULL);
+}
 for (i = 0; i < index; i++)
 c = (*c).next;
 if (c == NULL)
