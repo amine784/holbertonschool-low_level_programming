@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "holberton.h"
 
 /**
@@ -10,9 +9,8 @@
 **/
 int get_bit(unsigned long int n, unsigned int index)
 {
-unsigned long int k;
-k = n;
-unsigned int x;
+
+  int x, k;
 x = n >> index;
 k = (x & 1);
 if (index < 31)
