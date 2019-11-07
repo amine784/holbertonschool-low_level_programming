@@ -14,6 +14,10 @@ int i = 0;
 int j = 0;
 int res = 0;
 int s = 1;
+if (b == 0)
+{
+return (NULL);
+}
 while (b[i] != '\0')
 i++;
 for (j = i - 1; j >= 0; j--)
