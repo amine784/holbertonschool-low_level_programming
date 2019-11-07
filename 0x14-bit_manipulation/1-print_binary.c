@@ -9,7 +9,9 @@
 **/
 void print_binary(unsigned long int n)
 {
-if (n > 1)
-print_binary(n >> 1);
-_putchar((n & 1) + '0');
+unsigned long int a;
+a = n;
+if (a > 1)
+print_binary(a >> 1);
+_putchar((a & 1) + '0');
 }
