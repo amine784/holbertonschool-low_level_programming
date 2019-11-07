@@ -16,7 +16,7 @@ int res = 0;
 int s = 1;
 if (b == 0)
 {
-return (NULL);
+return (0);
 }
 while (b[i] != '\0')
 i++;
