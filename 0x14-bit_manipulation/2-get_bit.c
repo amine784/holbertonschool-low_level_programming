@@ -1,7 +1,6 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
-#include <math.h>
+
 /**
 *get_bit-that returns the value of a bit at a given index.
 *@index: is the index, starting from 0 of the bit you want to get
