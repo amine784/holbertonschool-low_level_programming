@@ -13,12 +13,10 @@ int get_bit(unsigned long int n, unsigned int index)
 unsigned long int k;
 k = n;
 unsigned int x;
-while (n)
-{
 x = n >> index;
 k = (x & 1);
 if (index < 31)
 return (k);
-}
+else
 return (-1);
 }
