@@ -17,7 +17,7 @@ while (n)
 {
 x = n >> index;
 k = (x & 1);
-if (index < 32)
+if (index < 64)
 return (k);
 }
 return(-1);
