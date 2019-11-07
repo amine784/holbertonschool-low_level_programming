@@ -10,18 +10,15 @@
 **/
 int get_bit(unsigned long int n, unsigned int index)
 {
-unsigned  int a;
-a = 1;
-unsigned  int b;
-b = (sizeof(n) * 8);
-if (index > b)
+unsigned long int k;
+ k=n;
+unsigned int x;
+while (n)
 {
-return (-1);
+x = n >> index;
+k = (x & 1);
+if (index < 32)
+return (k);
 }
-a <<= index;
-if (a & n)
-{
-return (1);
-}
- return(0);
+return(-1);
 }
