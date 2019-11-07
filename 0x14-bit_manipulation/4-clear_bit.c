@@ -16,6 +16,6 @@ if ((*n == '\0') || (index > b))
 return (-1);
 }
 a <<= index;
-*n &=~a;
+*n & = ~a;
 return (1);
 }
