@@ -47,5 +47,5 @@ return (0);
 return(0);
 }
 close (a);
-return (W);
+return (W + 1);
 }
