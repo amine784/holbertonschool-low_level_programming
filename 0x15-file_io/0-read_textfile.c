@@ -13,27 +13,25 @@ ssize_t read_textfile(const char *filename, size_t letters)
 int a;
 ssize_t R;
 ssize_t W;
-ssize_t ch;
-ch = letters;
 char *buffer;
 if (filename == NULL)
 {
 return (0);
 }
-a = open(filename,  O_RDWR);
+a = open(filename,  O_RDONLY);
 if (a  == -1)
 {
 return (0);
 }
-buffer = malloc(ch * (sizeof(char)));
+buffer = malloc(letters * (sizeof(char)));
 if (buffer  == NULL)
 {
 return (0);
 }
-R = read(a, buffer, ch);
-if (R== -1)
+R = read(a, buffer, letters);
+if (R == -1)
 return (0);
-buffer[ch] = '\0';
+buffer[letters] = '\0';
 W = write(STDOUT_FILENO, buffer, R);
 if (W == -1)
 return (0);
