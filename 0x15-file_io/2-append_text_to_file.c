@@ -33,9 +33,5 @@ if (b == ret)
 {
 return (-1);
 }
-if (b < i)
-{
-return (-1);
-}
 return (1);
 }
