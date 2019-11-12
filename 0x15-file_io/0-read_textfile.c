@@ -37,8 +37,6 @@ buffer[R] = '\0';
 W = write(STDOUT_FILENO, buffer, R);
 if (W == -1)
 return (0);
- if(W != R)
-return(0);
 close (a);
 return (W);
 }
