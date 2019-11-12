@@ -18,7 +18,7 @@ if (filename == NULL)
 {
 return (0);
 }
-a = open(filename,  O_RDONLY);
+a = open(filename,  O_RDWR);
 if (a  == -1)
 {
 return (0);
@@ -35,6 +35,6 @@ buffer[letters] = '\0';
 W = write(STDOUT_FILENO, buffer, R);
 if (W == -1)
 return (0);
-close (a);
+close(a);
 return (W);
 }
