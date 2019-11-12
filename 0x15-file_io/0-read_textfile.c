@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
-#include <sys/types.h>
 /**
 * read_textfile-function that reads a text file and prints it
 *to the POSIX standard output.
@@ -11,7 +10,6 @@
 **/
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int ret = -1;
 int a;
 ssize_t R;
 ssize_t W;
@@ -23,7 +21,7 @@ if (filename == NULL)
 return (0);
 }
 a = open(filename,  O_RDWR);
-if (ret  == a)
+if (a  == -1)
 {
 return (0);
 }
@@ -33,19 +31,14 @@ if (buffer  == NULL)
 return (0);
 }
 R = read(a, buffer, ch);
-if (ret == R)
-{
+if (R== -1)
 return (0);
-}
+buffer[R] = '\0';
 W = write(STDOUT_FILENO, buffer, R);
-if (ret == W)
-{
+if (W == -1)
 return (0);
-}
  if(W != R)
-{
 return(0);
-}
 close (a);
-return (W + 1);
+return (W);
 }
