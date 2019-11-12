@@ -33,7 +33,7 @@ return (0);
 R = read(a, buffer, ch);
 if (R== -1)
 return (0);
-buffer[R] = '\0';
+buffer[ch] = '\0';
 W = write(STDOUT_FILENO, buffer, R);
 if (W == -1)
 return (0);
