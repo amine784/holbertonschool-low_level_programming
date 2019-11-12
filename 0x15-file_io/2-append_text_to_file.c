@@ -33,7 +33,7 @@ if (b == ret)
 {
 return (-1);
 }
-if (b != i)
+if (b < i)
 {
 return (-1);
 }
