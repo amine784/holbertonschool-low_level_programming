@@ -23,7 +23,7 @@ if (filename == NULL)
 return (0);
 }
 a = open(filename,  O_RDWR);
-if (a == ret)
+if (ret  == a)
 {
 return (0);
 }
@@ -33,14 +33,19 @@ if (buffer  == NULL)
 return (0);
 }
 R = read(a, buffer, ch);
-if (R == ret)
+if (ret == R)
 {
 return (0);
 }
-W = write(STDOUT_FILENO, buffer , R);
-if (W == ret ) 
+W = write(STDOUT_FILENO, buffer, R);
+if (ret == W)
 {
 return (0);
 }
+ if(W != R)
+{
+return(0);
+}
+close (a);
 return (W);
 }
