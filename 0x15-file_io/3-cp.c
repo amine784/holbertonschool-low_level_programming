@@ -14,12 +14,10 @@
 **/
 int main(int argc, char *argv[])
 {
-int rd = 1024, wr = 1024, c = 1024, from, to;
+int rd = 1024, wr = 1024, c = 1024, from, to, c1 = 1024;
 char bf[1024];
 if (argc != 3)
-{
 dprintf(STDERR_FILENO, "fatal error  "), exit(97);
-}
 from = open(argv[1], O_RDONLY);
 if (from < 0)
 {
@@ -47,17 +45,12 @@ dprintf(STDERR_FILENO, "Error: Can't write  to  file %s", argv[2]);
 dprintf(STDERR_FILENO, "\n"), exit(99);
 }
 c = close(from);
-if (c < 0)
+c1 = close(to);
+if (c < 0 || c1 < 0)
 {
-dprintf(STDERR_FILENO, "Error: Can't close %s", argv[1]);
-dprintf(STDERR_FILENO, "\n");
-exit(100);
-}
-c = close(to);
-if (c < 0)
-{
-dprintf(STDERR_FILENO, "Error: Can't close %s", argv[2]);
+dprintf(STDERR_FILENO, "Error: Can't close");
 dprintf(STDERR_FILENO, "\n"), exit(100);
-}}
+}
+}
 return (0);
 }
