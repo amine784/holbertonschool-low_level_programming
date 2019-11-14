@@ -45,12 +45,11 @@ dprintf(STDERR_FILENO, "Error: Can't write  to  file %s", argv[2]);
 dprintf(STDERR_FILENO, "\n"), exit(99);
 }
 c = close(from);
+if (c < 0)
+dprintf(STDERR_FILENO, "Error: Can't close from %s\n",argv[1]), exit(100);
 c1 = close(to);
-if (c < 0 || c1 < 0)
-{
-dprintf(STDERR_FILENO, "Error: Can't close");
-dprintf(STDERR_FILENO, "\n"), exit(100);
-}
+if(c1 < 0)
+dprintf(STDERR_FILENO, "Error: Can't close to %s\n",argv[2]), exit(100);
 }
 return (0);
 }
