@@ -33,7 +33,7 @@ dprintf(STDERR_FILENO, "\n"), exit(99);
 while (rd == 1024)
 {
 rd = read(from, bf, 1024);
-if (from == -1)
+if (rd == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 dprintf(STDERR_FILENO, "\n"), exit(98);
