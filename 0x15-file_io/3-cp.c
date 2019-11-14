@@ -30,18 +30,19 @@ if (to == -1)
 dprintf(STDERR_FILENO, "Error: Can't write  to  file %s", argv[2]);
 dprintf(STDERR_FILENO, "\n"), exit(99);
 }
-while ((rd = read(from, bf, 1024)) > 0)
+while (rd == 1024)
 {
+rd = read(from, bf, 1024);
+if (rd == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
+dprintf(STDERR_FILENO, "\n"), exit(98);
+}
 wr = write(to, bf, rd);
-if ((wr != rd) || (wr < 0))
+if (wr != rd)
 {
 dprintf(STDERR_FILENO, "Error: Can't write  to  file %s", argv[2]);
 dprintf(STDERR_FILENO, "\n"), exit(99);
-}
-if (rd == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't read from file  %s", argv[1]);
-dprintf(STDERR_FILENO, "\n"), exit(98);
 }
 c = close(from);
 if (c < 0)
