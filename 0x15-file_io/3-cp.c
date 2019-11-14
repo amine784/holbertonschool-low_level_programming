@@ -24,8 +24,7 @@ if (from < 0)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 dprintf(STDERR_FILENO, "\n"), exit(98);
 }
-to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR
-	  | S_IRGRP | S_IWGRP | S_IROTH);
+to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (to  < 0)
 {
 dprintf(STDERR_FILENO, "Error: Can't write  to  file %s", argv[2]);
