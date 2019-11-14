@@ -39,7 +39,7 @@ dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 dprintf(STDERR_FILENO, "\n"), exit(98);
 }
 wr = write(to, bf, rd);
-if (wr > rd)
+ if (wr != rd)
 {
 dprintf(STDERR_FILENO, "Error: Can't write  to  file %s", argv[2]);
 dprintf(STDERR_FILENO, "\n"), exit(99);
