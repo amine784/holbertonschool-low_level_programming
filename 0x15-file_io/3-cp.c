@@ -19,13 +19,13 @@ char bf[1024];
 if (argc != 3)
 dprintf(STDERR_FILENO, "fatal error  "), exit(97);
 from = open(argv[1], O_RDONLY);
-if (from < 0)
+if (from == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 dprintf(STDERR_FILENO, "\n"), exit(98);
 }
 to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-if (to  < 0)
+if (to == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write  to  file %s", argv[2]);
 dprintf(STDERR_FILENO, "\n"), exit(99);
@@ -33,7 +33,7 @@ dprintf(STDERR_FILENO, "\n"), exit(99);
 while (rd == 1024)
 {
 rd = read(from, bf, 1024);
-if (from < 0)
+if (from == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 dprintf(STDERR_FILENO, "\n"), exit(98);
