@@ -12,7 +12,8 @@
 **/
 int main(int argc, char *argv[])
 {
-int rd = 1024, wr = 0, c = 0, from, to, c1 = 0;
+int rd = 1024, c = 0, c1 = 0;
+ssize_t wr, from, to;
 char bf[1024];
 if (argc != 3)
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
