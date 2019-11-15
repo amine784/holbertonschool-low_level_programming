@@ -14,7 +14,7 @@
 **/
 int main(int argc, char *argv[])
 {
-int rd = 1024, wr = 1024, c = 1024, from, to, c1 = 1024;
+int rd = 1024, wr = 0, c = 0, from, to, c1 = 0;
 char bf[1024];
 if (argc != 3)
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
