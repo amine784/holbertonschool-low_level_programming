@@ -43,11 +43,11 @@ exit(99);
 c = close(from);
 if (c == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close from %d\n", c);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", c);
 exit(100);
 }
 c1 = close(to);
 if (c1 == -1)
-dprintf(STDERR_FILENO, "Error: Can't close to %d\n", c1), exit(100);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", c1), exit(100);
 return (0);
 }
