@@ -39,12 +39,12 @@ if (wr != rd)
 dprintf(STDERR_FILENO, "Error: Can't write  to  file %s\n", argv[2]);
 dprintf(STDERR_FILENO, "\n"), exit(99);
 }
+}
 c = close(from);
 if (c < 0)
 {
 dprintf(STDERR_FILENO, "Error: Can't close from %s", argv[1]);
 dprintf(STDERR_FILENO, "\n"), exit(100);
-}
 }
 c1 = close(to);
 if (c1 < 0)
