@@ -22,7 +22,7 @@ if (from == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file  %s", argv[1]);
 dprintf(STDERR_FILENO, "\n"), exit(98);
 }
-to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 664);
+to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (to == -1)
 dprintf(STDERR_FILENO, "Error: Can't write  to %s\n", argv[2]), exit(99);
 while (rd == 1024)
@@ -45,9 +45,9 @@ if (c < 0)
 dprintf(STDERR_FILENO, "Error: Can't close from %s", argv[1]);
 dprintf(STDERR_FILENO, "\n"), exit(100);
 }
+}
 c1 = close(to);
 if (c1 < 0)
 dprintf(STDERR_FILENO, "Error: Can't close to %s\n", argv[2]), exit(100);
-}
 return (0);
 }
