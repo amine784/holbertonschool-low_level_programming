@@ -4,6 +4,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <stddef.h>
 /**
 * main-main_function to copy buffer to anodher file.
 *@argc:number of arguments.
