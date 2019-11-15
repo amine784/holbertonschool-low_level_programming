@@ -1,11 +1,9 @@
-#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <string.h>
 /**
 * main-main_function to copy buffer to anodher file.
 *@argc:number of arguments.
@@ -24,7 +22,7 @@ if (from == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file  %s", argv[1]);
 dprintf(STDERR_FILENO, "\n"), exit(98);
 }
-to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
+to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 664);
 if (to == -1)
 dprintf(STDERR_FILENO, "Error: Can't write  to %s\n", argv[2]), exit(99);
 while (rd == 1024)
