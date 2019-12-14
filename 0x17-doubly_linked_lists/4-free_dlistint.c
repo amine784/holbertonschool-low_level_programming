@@ -10,9 +10,9 @@ dlistint_t *h = NULL;
 int i;
 for (i = 0; head != NULL; i++)
 {
-h = (*head).next;
-free(head);
+h = head;
+head = (*head).next;
+free(h);
 head = NULL;
-head = h;
 }
 }
