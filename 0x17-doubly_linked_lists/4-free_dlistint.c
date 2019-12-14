@@ -13,6 +13,5 @@ for (i = 0; head != NULL; i++)
 h = head;
 head = (*head).next;
 free(h);
-head = NULL;
 }
 }
