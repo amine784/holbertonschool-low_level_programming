@@ -4,16 +4,28 @@
 *@head first node of :doubly linked lists.
 *@n:value of new node
 *Return:Always success.
+*dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+*{
+*dlistint_t *node;
+*node = malloc(sizeof(dlistint_t));
+*if (node == NULL)
+*return (NULL);
+*(*node).n = n;
+*(*node).next = *head;
+*(*node).prev = NULL;
+*head = node;
+*return (node);
+*}
 **/
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-dlistint_t *node;
-node = malloc(sizeof(dlistint_t));
-if (node == NULL)
+dlistint_t *new;
+new = malloc(sizeof(dlistint_t));
+if (new == NULL)
 return (NULL);
-(*node).n = n;
-(*node).next = (*head);
-(*node).prev = NULL;
-(*head) = node;
-return (node);
+new->n = n;
+new->next = *head;
+new->prev = NULL;
+*head = new;
+return (new);
 }
