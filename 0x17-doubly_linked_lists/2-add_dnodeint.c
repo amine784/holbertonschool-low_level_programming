@@ -11,7 +11,7 @@ int buffer = sizeof(dlistint_t);
 dlistint_t *node = malloc(buffer);
 if (node == NULL)
 {
-printf("can't allocate memory");
+return (NULL);
 }
 (*node).n = n;
 (*node).next = *head;
