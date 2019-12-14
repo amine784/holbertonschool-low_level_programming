@@ -13,12 +13,6 @@ if (node == NULL)
 {
 return (NULL);
 }
-if (*head == NULL)
-{
-node->next = NULL;
-*head = node;
-return (*head);
-}
 (*node).n = n;
 (*node).next = *head;
 (*node).prev = NULL;
