@@ -13,8 +13,8 @@ for (i = 0; head != NULL; i++)
 if (index == i)
 {
 return (head);
-head = (*head).next;
 }
+head = (*head).next;
 }
 return (NULL);
 }
