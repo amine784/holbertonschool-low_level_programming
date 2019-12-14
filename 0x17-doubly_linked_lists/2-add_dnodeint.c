@@ -7,8 +7,8 @@
 **/
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-int buffer = sizeof(dlistint_t);
-dlistint_t *node = malloc(buffer);
+dlistint_t *node;
+node = malloc(sizeof(dlistint_t));
 if (node == NULL)
 {
 return (NULL);
