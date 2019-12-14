@@ -15,7 +15,7 @@ return (NULL);
 }
 (*node).n = n;
 (*node).next = *head;
-*head = node;
 (*node).prev = NULL;
+*head = node;
 return (node);
 }
