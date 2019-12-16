@@ -13,15 +13,15 @@ int a, b, c;
 char *S1 = s1 + 1, *S2 = s2 + 1;
 if (*s1 == delim  && *s2 == delim)
 return (1);
-if (*s1 == *s2)
-{
-a = wildcmp(S1, S2);
-return (a);
-}
 if (*s1 == delim && *s2 == '*')
 {
 b = wildcmp(s1, S2);
 return (b);
+}
+if (*s1 == *s2)
+{
+a = wildcmp(S1, S2);
+return (a);
 }
 if (*s2 == '*')
 {
