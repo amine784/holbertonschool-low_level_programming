@@ -18,7 +18,7 @@ if (*s1 == *s2)
 a = wildcmp(S1, S2);
 return (a);
 }
-if (*s1 == delim && *s2 == delim)
+if (*s1 == delim && *s2 == '*')
 {
 b = wildcmp(s1, S2);
 return (b);
