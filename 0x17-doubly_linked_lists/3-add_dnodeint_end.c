@@ -16,10 +16,10 @@ return (NULL);
 }
 (*node).n = n;
 (*node).next = NULL;
+(*node).prev = NULL;
 c = *head;
 if (c == NULL)
 {
-(*node).prev = NULL;
 *head = node;
 return (node);
 }
