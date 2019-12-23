@@ -14,18 +14,14 @@ if (node == NULL)
 {
 return (NULL);
 }
-c = *head;
-if (head == NULL)
-{
-*head = node;
-(*node).prev = NULL;
-}
 (*node).n = n;
 (*node).next = NULL;
-if (*head == NULL)
+c = *head;
+if (c == NULL)
 {
+(*node).prev = NULL;
 *head = node;
-return (0);
+return (node);
 }
 while ((*c).next != NULL)
 {
