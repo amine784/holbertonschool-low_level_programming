@@ -14,19 +14,19 @@ if (node == NULL)
 {
 return (NULL);
 }
+c = *head;
 if (head == NULL)
 {
 *head = node;
+(*node).prev = NULL;
 }
 (*node).n = n;
 (*node).next = NULL;
-(*node).prev = NULL;
 if (*head == NULL)
 {
 *head = node;
 return (0);
 }
-c = *head;
 while ((*c).next != NULL)
 {
 c = (*c).next;
