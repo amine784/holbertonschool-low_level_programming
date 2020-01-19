@@ -12,7 +12,7 @@ void hash_table_print(const hash_table_t *ht)
 unsigned long int i;
 char *spec = "";
 hash_node_t *p_node;
-if (ht == NULL  || (*ht).array == NULL || (*ht).size == 0)
+if (ht == NULL  || (*ht).array == NULL)
 {
 printf("{}\n");
 return;
