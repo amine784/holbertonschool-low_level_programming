@@ -13,7 +13,6 @@ hash_node_t *node;
 unsigned long int i;
 if ((ht == NULL) || ((*ht).array == 0))
 {
-free((*ht).array);
 free(ht);
 return;
 }
@@ -24,8 +23,8 @@ for (i = 0; i < (*ht).size; i++)
 if ((*ht).array[i] != NULL)
 {
 node = ((*ht).array[i]->next);
-free((*ht).array[i]->value);
 free((*ht).array[i]->key);
+free((*ht).array[i]->value);
 free((*ht).array[i]);
 (*ht).array[i] = node;
 }
