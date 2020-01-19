@@ -25,6 +25,7 @@ if ((*ht).array[i] != NULL)
 node = ((*ht).array[i]->next);
 free((*ht).array[i]->key);
 free((*ht).array[i]->value);
+free((*ht).array[i]);
 (*ht).array[i] = node;
 }
 }
