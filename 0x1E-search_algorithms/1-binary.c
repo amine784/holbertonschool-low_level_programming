@@ -21,7 +21,14 @@ for (; low <= high; i++)
 {
 printf("Searching in array: ");
 for (c = low; c < high + 1; c++)
+{
+if (c == high)
+{
 printf("%d ", array[c]);
+}
+else
+printf("%d, ", array[c]);
+}
 printf("\n");
 middle = (low + high) / 2;
 if (array[middle] == value)
