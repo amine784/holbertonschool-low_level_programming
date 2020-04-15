@@ -15,7 +15,7 @@ size_t c, i = 0;
 size_t low = 0;
 size_t high = size - 1;
 size_t middle;
-if (!array)
+if (size == 0)
 return (-1);
 for (; low <= high; i++)
 {
