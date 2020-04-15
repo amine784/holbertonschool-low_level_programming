@@ -24,7 +24,7 @@ for (c = low; c < high + 1; c++)
 {
 if (c == high)
 {
-printf("%d ", array[c]);
+printf("%d", array[c]);
 }
 else
 printf("%d, ", array[c]);
